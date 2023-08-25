@@ -10,7 +10,10 @@ function vis(data) {
     const klon = temp.cloneNode(true);
     klon.querySelector("h3").textContent = beer.name;
     klon.querySelector("img").src = beer.image_url;
-    klon.querySelector("details span").textContent = beer.method.twist;
+    if (beer.method.twist) {
+      klon.querySelector("article").classList.add("twisted");
+      klon.querySelector("details span").textContent = beer.method.twist;
+    }
     klon.querySelector("p span").textContent = beer.abv;
     klon.querySelector("p+p span").textContent = beer.ebc;
     parent.appendChild(klon);
