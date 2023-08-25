@@ -3,14 +3,14 @@ fetch("https://api.punkapi.com/v2/beers")
   .then((data) => vis(data));
 
 const temp = document.querySelector("template").content;
-const gode = document.querySelector("#gode");
-const onde = document.querySelector("#onde");
+const parent = document.querySelector("section");
 
 function vis(data) {
   data.forEach((beer) => {
     const klon = temp.cloneNode(true);
     klon.querySelector("h3").textContent = beer.name;
     klon.querySelector("p span").textContent = beer.abv;
+    klon.querySelector("p+p span").textContent = beer.ebc;
     klon.querySelector("img").src = beer.image_url;
     if (beer.method.twist) {
       klon.querySelector("article").classList.add("twisted");
@@ -19,10 +19,6 @@ function vis(data) {
     if (beer.abv > 5.5) {
       klon.querySelector("article").classList.add("strong");
     }
-    if (beer.srm > 20) {
-      dark.appendChild(klon);
-    } else {
-      light.appendChild(klon);
-    }
+    parent.appendChild(klon);
   });
 }
