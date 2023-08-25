@@ -14,6 +14,9 @@ function vis(data) {
       klon.querySelector("article").classList.add("twisted");
       klon.querySelector("details span").textContent = beer.method.twist;
     }
+    if (beer.abv > 5.5) {
+      klon.querySelector("article").classList.add("strong");
+    }
     klon.querySelector("p span").textContent = beer.abv;
     klon.querySelector("p+p span").textContent = beer.ebc;
     parent.appendChild(klon);
