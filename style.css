@@ -32,6 +32,7 @@ article {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
+  position: relative;
 }
 
 article div {
@@ -44,4 +45,14 @@ article div {
 
 article.twisted .twist {
   display: block;
+}
+
+article.strong::after {
+  content: "STÆRK";
+  padding: 1em;
+  background-color: red;
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+  rotate: 20deg;
 }
