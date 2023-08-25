@@ -37,6 +37,7 @@ article {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
+  position: relative;
 }
 
 article div {
@@ -50,4 +51,15 @@ article .twist {
 article.twisted .twist {
   display: block;
   justify-content: space-between;
+}
+
+article.strong::after {
+  content: "STÆRK";
+  background-color: red;
+  color: white;
+  padding: 1em;
+  position: absolute;
+  bottom: 7%;
+  left: 9%;
+  rotate: -20deg;
 }
