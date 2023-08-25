@@ -3,7 +3,8 @@ fetch("https://api.punkapi.com/v2/beers")
   .then(vis);
 
 const temp = document.querySelector("template").content;
-const parent = document.querySelector("section");
+const light = document.querySelector(".light");
+const dark = document.querySelector(".dark");
 
 function vis(data) {
   data.forEach((beer) => {
@@ -19,6 +20,10 @@ function vis(data) {
     }
     klon.querySelector("p span").textContent = beer.abv;
     klon.querySelector("p+p span").textContent = beer.ebc;
-    parent.appendChild(klon);
+    if (beer.ebc > 17) {
+      dark.appendChild(klon);
+    } else {
+      light.appendChild(klon);
+    }
   });
 }
