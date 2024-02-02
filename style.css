@@ -40,6 +40,11 @@ article div {
 
 .twist {
   display: none;
+  background-color: yellowgreen;
+  color: white;
+  padding: 0.5rem;
+  transition: 0.5s;
+  border-radius: 10px;
 }
 
 article.twisted .twist {
