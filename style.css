@@ -1,8 +1,7 @@
 body {
   max-width: 1000px;
   margin: auto;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 section {
@@ -38,10 +37,6 @@ article div {
   margin-bottom: 1em;
 }
 
-.twist {
+.gem {
   display: none;
-}
-
-article.twisted .twist {
-  display: block;
 }
