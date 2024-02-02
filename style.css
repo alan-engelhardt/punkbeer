@@ -1,8 +1,7 @@
 body {
   max-width: 1000px;
   margin: auto;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 section {
@@ -51,6 +50,7 @@ article.strong::after {
   content: "STÆRK";
   padding: 1em;
   background-color: red;
+  color: white;
   position: absolute;
   bottom: 7%;
   left: 10%;
