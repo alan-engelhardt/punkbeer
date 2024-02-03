@@ -10,6 +10,12 @@ section {
   gap: 2em;
 }
 
+#beer_list a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+
 h1 {
   border-bottom: solid 1px chocolate;
 }
