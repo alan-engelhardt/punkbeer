@@ -1,6 +1,7 @@
-const id = 1;
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
-fetch(`https://api.punkapi.com/v2/beers/2`)
+fetch(`https://api.punkapi.com/v2/beers/${id}`)
   .then((res) => res.json())
   .then(vis);
 
