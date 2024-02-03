@@ -8,6 +8,7 @@ const parent = document.querySelector("section");
 function vis(data) {
   data.forEach((beer) => {
     const klon = temp.cloneNode(true);
+    klon.querySelector("a").href = `single.html?id=${beer.id}`;
     klon.querySelector("h3").textContent = beer.name;
     klon.querySelector("img").src = beer.image_url;
     if (beer.method.twist) {
